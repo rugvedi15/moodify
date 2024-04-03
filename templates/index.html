@@ -8,14 +8,44 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #a1c4fd; /* Updated background color */
+            background-color: #1a60cf; /* Updated background color */
+            background-image: url('https://t4.ftcdn.net/jpg/06/33/03/47/360_F_633034756_MxqGWPVcKegNJLxCpF5winOkEX2Ngkgq.jpg'); /* Musical themed background image */
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay; /* Overlay to blend background image with background color */
+            transition: background-color 0.3s ease; /* Transition effect for background color */
         }
         .container {
-            background-color: #fff; /* Inside box color */
-            border-radius: 10px; /* Make the container rectangular */
+            background-color: #d3ddef; /* Inside box color */
+            border-radius: 10px; /* Rounded corners */
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Position relative for absolute positioning of images */
         }
+
+        .container::before,
+        .container::after {
+            content: ""; /* Empty content for pseudo-elements */
+            position: absolute; /* Absolute positioning for images */
+            width: 150px; /* Width of images */
+            height: 150px; /* Height of images */
+            top: 0; /* Position from the top */
+        }
+
+        .container::before {
+            background-image: url('https://i.pinimg.com/originals/39/f5/97/39f5974207b6df2437ab07bd10180b4d.png'); /* URL for left image */
+            background-size: cover;
+            background-position: center;
+            left: 0; /* Position from the left */
+        }
+
+        .container::after {
+            background-image: url('https://png.pngtree.com/png-clipart/20210425/original/pngtree-yellow-cat-musicians-listening-to-music-png-image_6252154.png'); /* URL for right image */
+            background-size: cover;
+            background-position: center;
+            right: 0; /* Position from the right */
+        }
+
         h1 {
             color: #333;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for better visibility */
