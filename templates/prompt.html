@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('music_background.jpg') no-repeat center center fixed; /* Background image related to music */
+            background-size: cover; /* Ensure background image covers the entire screen */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(173, 216, 230, 0.8); /* Semi-transparent background color */
+            border-radius: 100px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 4000px; /* Limiting container width for better readability */
+            margin: auto; /* Centering container horizontally */
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for better visibility */
+        }
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #333; /* Label color */
+        }
+        input[type="text"] {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            width: calc(100% - 16px); /* Adjusting input width */
+            box-sizing: border-box; /* Including padding in input width */
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Moodify Chatbot</h1>
+        <form action="/chat" method="post" onsubmit="return validateForm()">
+            <label>Nice to meet you, I was getting bored before you called me virtually.</label>
+            <br>
+            <label>So tell me, what kind of songs do you like to listen usually?</label>
+            <br>
+            <label>I personally love to listen AI generated music :p</label>
+            <br>
+            <input type="text" id="prompt" name="genre" required placeholder="Your genre choices!">
+            <br>
+            <br>
+            <input type="submit" value="Click Me!">
+        </form>
+    </div>
+
+</body>
+</html>
